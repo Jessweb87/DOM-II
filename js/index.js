@@ -1,6 +1,12 @@
 // Your code goes here
 console.log('This Project is difficult!!!');
 
+//Select the following elements from the DOM://
+const button = document.querySelectorAll('.btn');
+const image = document.querySelectorAll('img-content');
+const text = document.querySelectorAll('text-content');
+const nav = document.querySelector('.nav');
+
 //Using the mousepad you can zoom in and out on the Fun Bus//
 /* Using wheel*/
 function zoom(event){
@@ -16,7 +22,7 @@ logoHeading.addEventListener('wheel', zoom);
 
 // Navigation Links- when you mouse over each link it turns red and within second it resets to default color//
 /* Using mouseover */
-const nav = document.querySelector('.nav');
+
 nav.addEventListener("mouseover", function(event){
     event.target.style.color = "red";
     setTimeout(function(){
@@ -32,12 +38,39 @@ window.addEventListener('load', (event) =>{console.log('You Have Arrived!')
 // When you click on the first Sign Me Up! It will alert a box at the top saying This page says "Sign Me Up!"//
 /* Using click */
 
-const button = document.querySelector('.btn');
-button.addEventListener('click', function(event){
-    alert('Sign Me Up!');
-})
+// function signMeUp(event){
+//    console.log('What is happening?');
+// }
+// button.addEventListener('click', function(event){
+//     alert('Sign Me Up!');
+// })
+
+window.addEventListener('resize', function(){
+    document.querySelector('destination');
+});
+
+const buttons = document.querySelectorAll('.btn')
+
+//Change Color of bottom buttons upon mouseover
+
+function buttonHover(event) {
+    event.target.style.backgroundColor = "black"
+}
+
+buttons.forEach(element => element.addEventListener('mouseover', buttonHover));
+
+document.addEventListener('')
 
 
 
 
-
+// * `mouseover` ^
+// * `keydown`
+// * `wheel` ^
+// * `load` ^
+// * `focus`
+// * `resize`
+// * `scroll`
+// * `select`
+// * `dblclick`
+// * `drag / drop`
